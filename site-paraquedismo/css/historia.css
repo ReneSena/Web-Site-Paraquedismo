@@ -1,0 +1,156 @@
+body{
+    position: relative;
+    background-image: linear-gradient(to bottom, #ddd, #ccc);
+}
+.container{
+    display: flex;    
+}
+.conteudo-historia{
+    width: 80%;
+    margin: 3em auto 6em auto;
+} 
+/*Classe da pagina de contato*/
+.conteudo{
+    width: 80ch;
+    margin: 2em auto;   
+}
+.titulo-texto{
+    font-weight: bold;
+    font-size: 150%;
+    margin: 2em 0;
+    color: #363636;
+    box-shadow: 0 .5px 0 rgba(0, 0, 0,.6);
+}
+/*Animação Menu Principal*/
+.paraquedista-caindo{
+    margin: auto; /*Para o elemento dicar centralizado no meio do container*/
+    width: 128px;
+    height: 128px;
+    display: block;
+    text-indent: -99999px;
+    background-image: url(../img/paraquedista-caindo.png);
+    /*Propriedades da Animação*/
+    position: relative;
+    -webkit-animation: flutuar 1s infinite;
+    animation: flutuar 1s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate; 
+}
+
+@-webkit-keyframes flutuar{
+    from{
+        top: 10px;
+        transform: scale(0.6);
+    }
+    to{
+        top: -10px;
+        transform: scale(0.6);    
+    }
+}
+@keyframes flutuar{
+    from{
+        top: 10px;
+        transform: scale(0.6);   
+    }
+    to{
+        top: -10px;
+        transform: scale(0.6);    
+    }
+}
+.paragrafo{
+    font-size: 120%;
+    text-align: justify;
+    line-height: 1.5;
+    color:#363636;
+    text-shadow: 1px 1px 2px #f0f0f0;
+    margin: 1em 0;
+}
+.botao-voltar{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1em 1em;
+    margin: 1em 3em;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: #363636;
+    color: #f0f0f0;
+    transition: .8s ease-in-out;
+}
+.botao-voltar:hover{
+    background-color: #696969;
+}
+.rodape{    
+    background-color: #363636;
+    border-top: .5px outset #888;
+    padding: 1em;
+}
+.rodape .container{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-flow: column wrap;
+}
+.redes-sociais{
+    display: flex;
+}
+.redes-sociais a{
+    align-items: flex-end;
+    text-decoration: none;
+    margin: 1em .5em;
+    width: 32px;
+    height: 32px;
+    display: block;
+    text-indent: -99999px;
+    position: relative;
+    opacity: 0.6;
+    transition: .5s ease-in-out;
+}
+.facebook{
+    background-image: url(../img/facebook.png);
+}
+.twitter{
+    background-image: url(../img/twitter.png);
+}
+.instagram{
+    background-image: url(../img/instagram.png);
+}
+.linkedin{
+    background-image: url(../img/linkedin.png);
+}
+.facebook:hover,
+.facebook:focus,
+.twitter:hover,
+.twitter:focus,
+.instagram:hover,
+.instagram:focus,
+.linkedin:hover,
+.linkedin:focus{
+    opacity: 1;
+}
+.redes-sociais h1,
+.direitos-autorais{
+    color: #888;
+    text-transform: uppercase;
+    font-size: 70%;
+    align-items: center;
+}
+.redes-sociais h1{
+    font-weight: bold;
+    font-size: 120%;
+    margin: .9em 0; ;
+}
+ 
+/*Ajuste para telas menores*/
+@media (max-width: 412px){
+	.direitos-autorais{
+		font-size: 50%;
+	}
+}
+@media (max-width: 768px){
+	.botao-voltar{
+		width: 40%;
+		margin: 1em auto;
+		text-align: center;
+	}
+}

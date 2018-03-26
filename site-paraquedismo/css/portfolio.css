@@ -1,0 +1,97 @@
+.corpo{
+    background-image: linear-gradient(to bottom, #696969, #696969);
+}
+.conteudo-fotos{
+    width: 100%;
+    margin: 6em auto;
+}
+.container .menu-fotos{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-flow: row wrap;
+}
+.titulo-galeria{  
+    text-align: center;
+    font-size: 150%;
+    margin: 0 2em 2em 2em;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 1px #000;
+    text-transform: uppercase;
+    padding: .5em 0;
+    position: relative;
+    box-shadow: 0.1px 0.1px 0.1px #ccc;   
+}
+.titulo-galeria:after{
+    content: url(../img/paragliding.png);
+    margin: 1em;
+}
+.titulo-galeria::before{
+    content: url(../img/ultralight.png);
+    margin: 1em; 
+}
+.menu-fotos li{
+    position: relative;
+    width: 50ch;
+    height: 40ch;    
+    background-size: 100% 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    text-indent: -99999px;
+    flex: 1 2 70% 70%;  /*Controlando o flex-grow, shrink, largura e altura*/
+    opacity: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: .5s ease-in;
+}
+.salto-livre{
+    background-image: url(../img/salto-livre.png);
+}
+.paraquedistas-conjunto{
+    background-image: url(../img/paraquedistas-conjunto.jpg);
+}
+.equipe{
+    background-image: url(../img/equipe.jpg);
+}
+.acrobacia{
+    background-image: url(../img/acrobacia.jpg);
+}
+.formacao{
+    background-image: url(../img/formacao.jpg);
+}
+.salto-duplo{
+    background-image: url(../img/salto-duplo.jpg);
+}
+.flutuando{
+    background-image: url(../img/flutuando.jpg);
+}
+.base{
+    background-image: url(../img/base.jpg);
+}
+.salto-montanha{
+    background-image: url(../img/salto-montanha.jpg);
+}
+.base-montanha{
+    background-image: url(../img/base-montanha.jpg);
+}
+.base-pedra{
+    background-image: url(../img/base-pedra.png);
+}
+.base-duplo{
+    background-image: url(../img/base-duplo.jpg);
+}
+/*Mobile*/
+
+@media (max-width: 412px){
+    .container .menu-fotos{
+        justify-content:center;
+    }
+    .menu-fotos li{
+        border-radius: initial; 
+    }
+    .titulo-galeria{
+        text-align: center;
+        font-size: 90%;
+        margin: 0 0 2em 0;
+    }
+}

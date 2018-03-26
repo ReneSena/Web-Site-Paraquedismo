@@ -1,0 +1,209 @@
+html{
+    font-size: 100%;
+    font-family: 'Kalam', cursive, sans-serif;
+}
+body{
+    background-color: #FFFFF0;
+    line-height: 1.5; 
+}
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+.cabecalho .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cabecalho .titulo{
+    margin: .5em 0;
+    align-items: center;
+}
+.navegacao{
+    display: flex;
+    padding: 1em 0;
+}
+.cabecalho{
+    background-color: #F8F8FF;
+    border-bottom: 8px solid #ccc;
+}
+.titulo a{
+    color: #888;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    font-size: 140%;
+    font-weight: bold;
+    align-content: center;
+}
+.titulo a::after{
+    content: url(../img/mask.png);
+    margin-left: 1em;
+    -webkit-animation: flutua 1s infinite ease-in-out;
+   -moz-animation: flutua 1s infinite ease-in-out;
+    animation: flutua 1s infinite ease-in-out; 
+   -webkit-animation-direction: alternate;
+   -moz-animation-direction: alternate;
+   animation-direction: alternate;
+   position: relative;
+}
+@-moz-keyframes flutua{
+    from{
+        transform: rotate(3deg);
+    }
+    to{
+        transform: rotate(-3deg);
+    }
+}
+@-webkit-keyframes flutua{
+    from{
+        transform: rotate(3deg);
+    }
+    to{
+        transform: rotate(-3deg);
+    }
+}
+@keyframes flutua{
+    from{
+        transform: rotate(3deg);
+    }
+    to{
+        transform: rotate(-3deg);
+    }
+}
+.navegacao a{
+    display: block;
+    border: .5px solid #ccc;
+    padding: .5em;
+    margin: .2em .5em;
+    text-decoration: none;
+    border-radius: 10px;
+    
+    font-size: 100%;
+    text-transform: uppercase;
+    color: #888;
+    transition: background-color 1s  ease-in-out; 
+}
+.navegacao a:hover,
+.menu a:focus{
+    background-color: #888;
+    color: #fff;
+}
+.foto-paraquedista{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.foto-paraquedista .foto{
+    margin: 2em 0;
+    border: 5px solid #888;
+}
+/*Seções da página principal*/
+
+.titulo-inicial{
+    font-size: 180%;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+}
+.secao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    width:100%;
+    height: 60%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+   
+
+    padding: 6em 0;
+    text-align: center;
+    color: #fff;
+    border-bottom: 1px inset #ccc;
+}
+.container-secao{
+    width: 80%;
+}
+.texto-apresentacao{
+    color: #fff; 
+    font-size: 150%;   
+}
+.texto-interativo{
+    color: #fff; 
+    font-size: 120%;   
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+.saiba-mais{
+    box-shadow: 1px 1px 2px #000;
+    font-family: 'Changa', sans-serif;
+    font-size: 90%;
+    font-weight: 700;
+    padding: .8em 3em;
+    border: none;
+    border-bottom: 5px solid #fff;
+    border-radius: 5px;
+    background-color: #4682B4;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    transition: .5s ease-out;
+}
+.saiba-mais:hover,
+.saiba-mais:focus{
+    background-color: #3A5FCD;
+    box-shadow:  0 0 0.8em #fff;    
+    color: #000;
+   
+}
+.inicial{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../img/paraquedista.jpg);
+}
+.modalidade{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../img/salto-duplo_2.jpg);
+}
+.galeria{
+    color: #fff;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../img/jump-loko.jpg);
+ 
+}
+.galeria .texto-interativo,
+.galeria .texto-apresentacao{
+    color:#fff;
+}
+ 
+.contato{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../img/index-contato.jpg);
+}
+
+/*Adaptaçãp para Mobile*/
+@media (max-width: 768px){
+    .cabecalho .container{
+        flex-direction: column;
+        align-items: initial;
+    }
+    .navegacao{
+        flex-direction:column;  
+        text-align: center;
+    }
+    .cabecalho .titulo{
+      text-align: center;
+    }
+    .titulo-inicial{
+        font-size: 120%;
+    }
+    .texto-apresentacao{
+        font-size: 100%;
+    }
+    .texto-interativo{
+        font-size: 100%;
+    }
+    .saiba-mais{
+        padding: .8em 5em;
+        font-size: 70%;
+    }  
+}
