@@ -1,0 +1,152 @@
+
+.legenda{
+    font-size: 150%;
+    margin-bottom: 1.5em;
+    text-align: center;
+    border-bottom: 1px solid #330033;
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 2em auto;
+    
+}
+
+label[for],label{
+    font-size: 90%;
+    cursor: pointer;
+}
+
+input[type="text"],input[type="email"], input[type="date"]{
+    width: 100%;
+    margin: 1em 0;
+    padding: 0.5em 0em;    
+    border:none;
+    border-bottom: 1px solid #ccc;
+    outline:none;
+    background-color: transparent;    
+
+}
+
+input[type="text"]:focus,input[type="email"]:focus, input[type="date"]:focus{
+    border-bottom: 2px solid rgb(75, 5, 110);
+}
+input[type="radio"],input[type="checkbox"]{
+    margin: 1em .2em;
+    width: 16px;
+    height: 16px;
+}
+
+input[type="submit"], .btn-voltar{
+    border: none;
+    font-size: 15px;
+    padding: .8em 2em;
+    margin-top: 1em;
+    background-color: rgb(75, 5, 110);
+    color: #fff;
+    position: relative;
+    margin-left: 1em;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 2px 2px 1px #000;
+    text-transform: uppercase;
+    
+  
+}
+
+input::placeholder{
+    font-style: italic;
+    font-size: 90%;
+    color: #678;
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus, .btn-voltar:hover,
+.btn-voltar:focus{
+    background-color:  #66188d;
+    box-shadow: 2px 2px 1em #000;
+}
+
+.titulo-form{
+    font-size: 180%;
+    margin: 1em 0em;
+    margin-bottom: 2em;
+    text-align: center;
+    width: 100%; 
+    
+}
+
+fieldset{
+    margin-bottom: 4em;
+}
+
+
+.cancelar {
+   margin-left: 55%;
+}
+
+
+
+.botao-table-e{
+    margin-top: 0em;
+    margin-right: 13px;
+    background-color: #00ffaa;
+    
+}
+
+.botao-table-d{
+    margin-top: 0em;
+    margin-right: 13px;
+    background-color:  #ff1a1a;
+    
+}
+
+input[type="text"]{
+    margin-bottom: 1em;
+}
+
+.container-principal{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 40%;
+    margin: 5em auto;
+    
+}
+
+.txEnd{
+    display: block;
+}
+
+.inpEnd{
+    width: 82% !important;
+    margin-right: 3% !important; 
+}
+
+.inpNum{
+    width: 9% !important;
+}
+
+.combo {
+    width: 100%;
+    margin: 1em 0;
+    margin-bottom: 1.5em;
+    padding: 0.5em 0em;    
+    border:none;
+    border-bottom: 1px solid #ccc;
+    outline:none;
+    background-color: transparent;   
+
+}
+
+.btn-meusDados{
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+}

@@ -1,0 +1,168 @@
+
+.legenda{
+    font-size: 150%;
+    margin-bottom: 1.5em;
+    text-align: center;
+    border-bottom: 1px solid #330033;
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 2em auto;
+    margin-top: 4em;
+    
+}
+
+label[for],label{
+    font-size: 90%;
+    cursor: pointer;
+    
+    
+}
+
+input[type="text"], input[type="date"] {
+    width: 60%;
+    padding: 0.5em 0em;    
+    border:none;
+    outline:none;
+    background-color: transparent;  
+
+}
+
+
+
+input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus, input[type="date"]:focus{
+    border-bottom: 2px solid rgb(75, 5, 110);
+}
+
+input[type="submit"]{
+    border: none;
+    padding: .8em 1em;
+    margin-top: 1em;
+    background-color: rgb(75, 5, 110);
+    color: #fff;
+    width: 40%;
+    position: relative;
+    margin-left: auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 2px 2px 1px #000;
+    text-transform: uppercase;
+    
+  
+}
+
+input::placeholder{
+    font-style: italic;
+    font-size: 90%;
+    color: #678;
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus{
+    background-color:  #66188d;
+    box-shadow: 2px 2px 1em #000;
+}
+
+.botao-a:hover, .botao-a:focus {
+    color: #210530;
+}
+
+.titulo-form{
+    font-size: 180%;
+    margin: 1em 0em;
+    margin-bottom: 2em;
+    text-align: center;
+    width: 100%; 
+    
+}
+
+fieldset{
+    margin-bottom: 2em;
+}
+
+.fil-main{
+    display: flex;
+    margin-bottom: 2em;
+
+}
+
+.label-div {
+    margin: 2em 0;
+    font-size: 18px;
+
+}
+
+.labelTCliente{
+    font-weight: bold;
+    margin-left: 2em;
+}
+
+.labelTData{
+    margin-left: 3em;
+}
+
+.labelHora{
+    margin-left: 2.5em;
+}
+
+input [type="text"]{
+    margin-left: 70em;
+    border: none;
+    width: 60%;
+}
+
+.div-botoes{
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao-a{
+    position: relative;
+    margin: auto 0;
+    color: #66188d;
+
+}
+
+.botao-a::before{
+    content: url(../img/back.png);
+    position: relative;
+    top: 1.5px;
+    
+}
+
+.label-all{
+    font-weight: bold;
+}
+
+input.txAll{
+    margin-left: 1.2em;
+}
+
+.botao-a{
+    position: absolute;
+    color: #66188d;
+    top: 636px;
+
+}
+
+.botao-a::before{
+    content: url(../img/back.png);
+    position: relative;
+    top: 2.5px;
+    padding-right: 5.5px;
+}
+
+.botao-a:hover, .botao-a:focus {
+    color: #210530;
+}
+
+.txData{
+    color: black;
+}

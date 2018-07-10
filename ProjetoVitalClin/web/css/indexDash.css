@@ -1,0 +1,444 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{font-family: 'Raleway', sans-serif;}
+body{background-color: #fff;
+     background-image: linear-gradient(135deg, rgba(245, 191, 238, 0.808), rgba(166, 218, 175,0.808)), url(../img/background_index.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+     background-position: center;
+     
+}
+
+/* Header */
+.cabecalho{  
+    position: relative;
+}
+
+/*-------*/
+
+
+.background-boas-vindas{
+    text-align: center;
+    line-height: 1;
+}
+.titulo-principal-dash, .subtitulo-principal{
+    margin-top: 2em;
+    font-size: 280%;
+    text-transform: uppercase;
+    color: rgba(100, 23, 87, 0.603);
+    text-shadow: 2px 2px .5em rgb(255, 255, 255);
+    font-weight: bold;
+    animation: mudaCor 10s infinite ease-in-out; 
+    animation-direction: alternate;
+    position: relative;
+    opacity: .8;
+}
+.titulo-principal-dash::first-letter{
+    font-size: 300%;
+}
+.subtitulo-principal{
+    margin-top: 0;
+    font-size: 200%;
+    color: rgba(82, 134, 57, 0.603);
+}
+.subtitulo-principal::after{
+    content: url(../img/favicon.png);
+    margin: 1em 0;
+}
+
+.titulo-principal-dash:hover{
+    animation-play-state: paused;
+}
+@-moz-keyframes mudaCor {
+    from {color: rgb(54, 124, 72); }
+    50%{color: rgb(184, 78, 184); text-shadow: 2px 2px 1em #000;}
+    /* 70%{opacity: 0;} */
+    to {color: purple;}
+}
+@-webkit-keyframes mudaCor {
+    from {color: rgb(66, 204, 100);}
+    50%{color: #fff;}
+    70%{opacity: .3;}  
+    to {color: purple;}
+}
+@keyframes mudarCor{
+    from {color: rgb(66, 204, 100);}
+    50%{color: #fff;}
+    70%{opacity: .3;}
+    to {color: purple;}
+}
+
+/* header de logout */
+
+.Nome-cli{
+    margin-right: 59px;
+    position: relative;
+    color: #fff;
+}
+
+.Nome-cli::after{
+    content: url(../img/usuario32.png);
+    position: fixed;
+    top: 17px;
+    right: 35px;
+}
+
+.Nome-cli::before{
+    content: url(../img/baixo.png);
+    margin-right: 0.58em;
+    position: relative;
+    top: 0.2em;
+}
+
+.logout-dash{
+    position: fixed;
+    top: 0;
+    right: 0.5em;
+    z-index: 0;
+    width: 16ch;
+    padding: 5em 0.5em .5em 0.5em;  
+    background-color: rgba(121, 54, 155, 0.993);
+    border-radius: 7px 7px;
+    transform: translateY(-200%);
+    transition: transform .5s linear;
+}
+
+.logou-ativo{
+    transform: translateY(0);
+    transition: transform .5s linear;
+    box-shadow: 2px 2px 10px #000;
+}
+ 
+.logout-dash a{
+    text-decoration: none;
+    color: #fff;
+}
+.meus-dados::before{
+    content: url(../img/user.png);
+    margin-right: .5em;
+}
+
+.li-login{
+    padding: 0.6em;
+}
+
+.li-login:hover,
+.li-login:focus{
+    background-color:  #66188d;
+    border-radius: 2px;
+}
+
+.b:hover,
+.b:focus{
+    border-bottom-left-radius: 7px 7px;
+    border-bottom-right-radius: 7px 7px;
+}
+
+.menu-topo a:hover{       
+    color: rgb(172, 64, 235);
+}
+
+.logout-cli::before{
+    content: url(../img/sair.png);
+    margin-right: .5em;
+    width: 100%;
+}
+
+.li-collap{
+    text-align: center;
+    margin: 0;
+}
+
+.botao-collapsed{
+    color: #888; 
+}
+
+a .Nome-cli .botao-collapse {
+    color: #fff;
+}
+
+/* Estilizando classe main */
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1em;
+    z-index: 1;
+    background-color: rgb(75, 5, 110);
+    border-bottom: 2px solid #fff;
+    box-shadow: 1px 1px 1em #000;
+    position: fixed;
+    width: 100%;
+}
+.titulo-principal{
+    color: #fff; 
+    text-transform: uppercase; 
+}
+.titulo-principal{
+    font-size: 120%;
+} 
+.titulo-principal::first-letter{
+    font-size: 150%;
+} 
+.titulo-principal::after{
+   content: url(../img/favicon.png);
+}
+/*.menu-topo{
+    display: flex;
+}
+.menu-topo li{
+    display: block;
+    margin: .5em;
+}*/
+
+
+.dividir-container{
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+}
+
+/* Aside */
+.menu-navegacao-dashbord{
+    display: flex;
+    align-items:center;
+    flex-grow: 1;
+    position: fixed;
+    height: 100%;
+
+    background-color: #4b066d;
+    box-shadow: 1px 1px 1px #000;
+}
+.menu-left li{
+    list-style: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);    
+    padding: .8em 2em;
+   
+    transition: .5s ease-in-out; 
+    cursor: pointer;
+}  
+.menu-left li:hover{
+    background-color: #4b066dd3;
+    transform: translateX(20px) translateY(-5px);
+    border-radius: 5px;
+    box-shadow: 1px 1px 1em rgba(206, 200, 200, 0.342);
+}   
+.link-home::before, .link-agendamento::before, .link-tratamento::before,
+.link-despesa::before, .link-estoque::before, .link-cadastro::before{
+    margin-right: .5em;
+}
+.link-home::before{
+    content: url(../img/house.png);   
+}
+.link-cadastro::before{
+    content: url(../img/cadastro_cli.png);   
+}
+.link-agendamento::before{
+    content: url(../img/agendamento.png);
+}
+.link-tratamento::before{
+    content: url(../img/tratamentos.png);
+}
+.link-estoque::before{
+    content: url(../img/estoque.png);
+}
+.link-despesa::before{
+    content: url(../img/despesas.png);
+}
+ /* Main  - Form */
+.conteudo-principal{
+    /* width: 100%;
+    width: calc(100% - 30%); */
+    margin: 7em 0;
+    
+    
+}
+.container-main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* footer */
+
+.rodape{
+    float: right;
+    width: 100%;
+    clear: both;
+    padding: 1em;
+    background-color: #4b066dd2;
+    
+}
+.rodape p{
+    text-align: end;
+    color: #fff;
+    font-size: 70%;
+    text-transform: uppercase;
+}
+p{
+    text-align: justify;
+}
+
+.navegacao-dash-home{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.lista-menu-navegacao-admin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+}
+.lista-menu-navegacao-admin .item{
+    display: block;
+    margin: .5em;
+}
+
+.item{
+    position: relative;
+    transition: transform .6s ease-in-out;
+}
+.item a{
+    padding: 2em 2em .5em 2em;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    background-position: center 50px;
+    background-repeat: no-repeat;
+    margin: .5em;
+    box-shadow: 2px 2px .5em .1em  #000;
+    animation: aparece 2s;
+} 
+@keyframes aparece{
+    from{
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.item:hover{
+    transform: translateY(-20px) scale(1.2); 
+}
+.item a:hover{
+    background-color: rgba(0, 0, 0, 0.63);
+    padding: 2.5em;
+    border-bottom: 10px solid #fff;
+}
+.home{
+    background-color: rgb(134, 70, 150);
+    animation: aparece 3s;
+    animation-delay: 2s;
+}
+.home::before{
+    content: url(../img/house.png);  
+}
+.agendamento{
+    background-color: rgb(21, 62, 109);
+}
+.agendamento::before{
+    content: url(../img/cadastro_cli.png);
+}
+.cadastro{
+    background-color: rgb(16, 70, 20);
+}
+.cadastro::before{  
+    content: url(../img/agendamento.png)
+}
+.tratamento{
+    background-color: rgb(233, 77, 56); 
+}
+.tratamento::before{
+    content: url(../img/tratamentos.png);
+}
+.estoque{
+  background-color: rgb(202, 14, 108);
+}
+.estoque::before{   
+    content: url(../img/estoque.png);
+}
+.despesas{
+    background-color: rgb(151, 118, 202);  
+}
+.despesas::before{
+    content: url(../img/despesas.png); 
+}
+
+.home::before, .agendamento::before, .cadastro::before, .tratamento::before,
+.estoque::before, .despesas::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -.5em auto;
+    transform: translate(-50%, -100%);
+}
+
+
+ 
+.halftone {
+    background: white;
+    position: relative;
+    filter: contrast(25000%);
+    overflow: hidden;
+    transform: translateZ(0); /* force a HW accelerated layer */
+}
+
+.halftone > * {
+    filter: brightness(0.5) blur(4px);
+    animation: 10s animation-filter infinite alternate;
+}
+
+.halftone::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: -100%;
+    bottom: -100%;
+    background-blend-mode: multiply;
+    background:
+        radial-gradient(8px 8px, cyan, white),
+        radial-gradient(8px 8px, magenta, white),
+        radial-gradient(8px 8px, yellow, white);
+    background-size: 8px 8px;
+    background-position: 0 -3px, -2px 0, 2px 0;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    transform: rotate(11.25deg);
+    transition: 1s ease-in-out transform;
+    z-index: 1;
+    animation: 10s animation-overlay infinite alternate;
+}
+
+@keyframes animation-overlay {
+    0% {
+        transform: rotate(45.25deg) scale(10);
+    }
+
+    100% {
+        transform: rotate(11.25deg);
+    }
+}
+
+@keyframes animation-filter {
+    0% {
+        filter: brightness(0.5) blur(40px);
+    }
+
+    100% {
+        filter: brightness(0.5) blur(4px);
+    }
+}

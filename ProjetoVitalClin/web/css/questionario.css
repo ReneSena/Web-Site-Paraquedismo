@@ -1,0 +1,98 @@
+.html{
+    line-height: 1.5;
+}
+/*Header Documento*/
+.subtitulo{
+    font-size: 150%;
+    text-align: center;
+    margin-bottom: 2em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1em;
+}
+.subtitulo::after{
+    content: url(../img/favicon.png);
+    margin: 0 .5em;
+}
+/*Formulário de Avaliação com as informações dos pacientes e avaliador*/
+.dados-paciente{
+	width: 85%;
+    margin: auto;	
+}
+.dados-paciente, .questao-questoes-anamnese, .termo-responsabilidade{
+	margin: 2em auto;
+}
+input[name="nome"], input[name="idade"], input[name="avaliador"]{
+    padding: .5em .5em;
+    border: none;
+    border-bottom: 1px solid #888;
+    width: 55%;
+    outline: none;
+   
+	margin: .5em 0;
+}
+input[name="idade"]{
+	width: 10%;
+}
+input[name="avaliador"]{
+	width: 80%;
+}
+/*Perguntas e Botões de opções - Main*/
+.form-questionario{
+	position: relative;
+}
+.container-form-group, .termo-responsabilidade{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: .5em 0;
+}
+.container-form-group label, input[type="radio"]{
+    cursor: pointer;
+}
+.Titulo-termo{
+	font-size: 120%;
+	border-bottom: 1px solid #ccc;
+	padding: .5em;
+	margin: 1em;
+}
+.informacoes-termo-de-ciencia{
+	margin: 1em;
+	text-align: center;
+	font-size: 100%;
+}
+.assinatura-cliente{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 3em;
+}
+#data{
+	border: none;
+	outline: none;
+	margin: 0 1em;
+}
+label[for="assinatura"]{
+	padding-top: .5em;
+	width: 50%;
+	border-top: 1px solid #000;
+	position: relative;
+	top: 20px;
+}
+.btn-salvar{
+    padding: 1em 2em;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(72, 7, 85);
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000;
+	float: right; 
+}
+.pg-quest{
+	font-size: 90%;
+}
+.container-opcoes label{
+    font-size: 90%;
+}

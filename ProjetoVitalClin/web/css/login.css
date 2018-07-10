@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+} 
+html{font-family: 'Raleway', sans-serif;}
+
+/* inserindo background  */
+body{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.3)), url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* Estilizando header */
+.cabecalho{
+    padding: 1em;
+    border-bottom: 1px solid rgb(240, 240, 240,0.1);
+    background-color: rgba(0, 0, 0, 0.219);
+}
+.navegacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-nav{
+    display: flex;
+}
+.menu-nav li{
+    display: block;
+    margin: 0 1em;
+}
+.menu-nav a, .titulo{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 80%;
+    transition: .5s;
+}
+.menu-nav a:hover,
+.menu-nav a:focus{
+    border-bottom: 2px solid rgb(75, 5, 110);
+    padding: 1em;
+    color: rgb(75, 5, 110);
+    outline: none;
+    font-size: 90%;
+}
+.titulo{
+    font-size: 120%;
+}
+.titulo::first-letter{
+    font-size: 150%;
+}
+.titulo::after{
+    content: url(../img/favicon.png);
+}
+.container{
+    width: 50%;
+    margin: 3em auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Estilizando Form */
+.formulario{
+    width: 40ch;
+    position: relative;   
+    background-color: rgba(0, 0, 0, 0.185);
+    border-radius: 10px;
+    border-bottom: 1px solid rgb(240, 240, 240,0.1);
+    margin: 1.8em 0;
+}
+#legenda{
+    position: relative;
+    top: 20px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 15ch;
+    height: 15ch;
+    text-indent: -9999px;
+}
+.legenda{
+    background-image: url(../img/icone-white.png);  
+    order: 2;
+}
+div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+strong{
+    position: relative;
+    top: 30px;
+    text-transform: uppercase;
+    font-size: 150%;
+    color: #fff;
+    order: 1;
+    animation: mudaCor 2s infinite ease-in-out;
+    animation-direction: alternate;
+}
+strong:hover{
+    animation-play-state: paused;
+}
+@-moz-keyframes mudaCor {
+    from {color: rgb(66, 204, 100);}
+    50%{color: #fff;}
+    to {color: purple;}
+}
+@-webkit-keyframes mudaCor {
+    from {color: rgb(66, 204, 100);}
+    50%{color: #fff;}
+    to {color: purple;}
+}
+@keyframes mudarCor{
+    from {color: rgb(66, 204, 100);}
+    50%{color: #fff;}
+    to {color: purple;}
+}
+strong:first-letter{
+    font-size: 150%;
+}
+
+.field{    
+    display: flex;
+    padding: 2em 1em;
+    height: 25ch;
+    border:none;
+}
+input[name="txtEmail"],
+input[type="password"]{
+    width: 100%;
+    padding: .8em 3em;
+    margin: 1em 0;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+}
+
+/* Inserindo ícones no inputs */
+#email{
+    background-image: url(../img/email.svg);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: 5px 4px;
+    width: calc(100% - 6em);
+    cursor: pointer;
+    z-index: 1;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    transition: .5s;    
+}
+#password{
+    background-image: url(../img/password.svg);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: 5px 3px;
+    width: calc(100% - 6em);
+    cursor: pointer;
+    z-index: 1;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    transition: .5s;   
+}
+#email::placeholder, #password::placeholder{
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    padding: .5em;
+    color: #fff;
+}
+#email:focus,
+#password:focus{
+    border-bottom: 2px solid rgb(100, 6, 119);
+}
+
+input[name="submit"]{
+    margin: 2em auto;
+    width: 100%;
+    padding: .9em 0;
+    border-color: transparent;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;    
+    border-radius: 5px;
+    cursor: pointer;
+    background-color:rgba(75, 5, 110,.5);
+    color: #fff;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: .5s ease-in-out;
+    margin-bottom: 2em;
+    box-shadow: 1px 1px 2px rgb(0, 0, 0); 
+}
+
+input[name="submit"]:hover,
+input[name="submit"]:focus{
+    background-color:  rgb(75, 5, 110);
+}
+
+.opcoes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5em;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.opcoes a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 70%;
+}
+.opcoes a:hover,
+.opcoes a:focus{
+    color:  rgb(131, 37, 100);
+    text-decoration: underline;
+}
+/* Modal - Formulário Recuperar Senha */
+
+#modal-recuperar_senha{
+    display: none;
+    width: 30%;
+    background-color: #fff;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%,-50%);
+    z-index: 99999;
+    box-shadow: 0 0 0 9999px rgba(0,0,0,0.75);
+
+    text-align: center;
+    border-radius: 10px;
+}
+/* header modal */
+
+.header-modal{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.5;
+    border-radius: 10px 10px 0 0;
+    background-color:rgba(75, 5, 110);
+}
+.legenda-recuperação{
+    text-align: start;
+    margin: 1em;
+    color: #fff;
+    font-size: 130%;
+}
+.titulo-modal{
+    margin: 1em;
+    color: #000;
+    line-height: 1.5;
+}
+/* form modal */
+
+.fiel-recuperacao{
+    margin: auto;
+}
+input[name="recuperar-email"]{
+    width: 60%;
+    padding: .8em .5em;
+    margin: 1em 0;
+    background-color: none;
+    outline: none;
+    color: #000;
+    border:none;
+    border-bottom: 1px solid #888;
+}
+input[name="recuperar-email"]:focus{
+    border-bottom: 2px solid rgb(100, 6, 119);
+}
+input[name="btn-enviar"]{
+    margin: 2em auto;
+    width: 50%;
+    padding: .9em 0;
+    border-color: transparent;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;    
+    border-radius: 5px;
+    cursor: pointer;
+    background-color:rgba(75, 5, 110, 0.815);
+    color: #fff;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: .5s ease-in-out;
+    margin-bottom: 2em;
+    box-shadow: 1px 1px 2px rgb(0, 0, 0);  
+}
+input[name="btn-enviar"]:focus,
+input[name="btn-enviar"]:hover{
+    background-color:rgb(75, 5, 110);
+}
+
+/* Botao de fechar modal */
+
+.close{
+    position: absolute;
+    right: 0;
+    padding: 1em;
+    background-color: transparent;
+    border:none;
+    font-size: 120%;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+}
+
+/* Estilizando o footer */
+.rodape{
+    padding: 1.5em;
+    background-color: rgba(0,0,0,.2);
+}
+.direitos-autorais{
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 70%;
+}
+
+.avisos{
+    position: absolute;
+    width: 100%;
+    top: 68.5px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(187, 57, 50, 0.719);
+    color: #fff;
+}
+
+.aviso-modal{
+    margin: 0em 1em;
+    color: red;
+    text-align: center;
+}
