@@ -1,0 +1,80 @@
+<!-- Web site desenvolvido por: Rene de Sena Souza - Desenvolvedor Front-end    Data: 20/03/2018 -->
+<!DOCYTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="O site tem o intuito de mostrar as modalidades do paraquedismo">
+        <meta name="author" content="Rene de Sena Souza">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contato | Paraquedismo</title>
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/contato.css">
+        <link rel="stylesheet" href="css/modalidades.css">
+        <link rel="stylesheet" href="css/historia.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/menu_responsivo.css">        
+        <link href="https://fonts.googleapis.com/css?family=Changa" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+    </head>
+    <body class="corpo-contato">
+            <header class="cabecalho">
+                        <div class="container">
+                            <button class="menu-abrir">Abre Menu</button>
+                            <h1  class="titulo"> 
+                                <a class="foto-paraquedista" href="index.html">paraquedismo</a>
+                            </h1>
+                            <nav class="menu">
+                                <button class="menu-fechar">Fecha Menu</button>
+                                <ul class="navegacao">
+                                    <li><a href="index.html">home</a></li>
+                                    <li><a href="historia.html">história</a></li>
+                                    <li><a href="modalidades.html">modalidades</a></li>
+                                    <li><a href="portfolio.html">portfolio</a></li>
+                                    <li><a href="contato.html">contato</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+            </header>
+        <main class="container">
+            <div class="conteudo">
+                <p class="texto-aprensentacao">Nos envie uma mensagem contando como foi sua experiência com o paraquedismo, teremos o privilégio de recebê-la.</p>     
+                <form class="formulario" name="formulario-contato" method="POST" action="contato.html">       
+                        <fieldset class="dados">
+                                <legend class="legenda">Dados Necessários</legend>
+                                <label for="nome">Nome</label>
+                                    <input type="text" name="nome" id="nome" title="Informe seu nome" placeholder="Informe seu nome..." autofocus required/>
+                                <label for="email">E-mail</label>
+                                    <input type="email" name="email" id="email" title="informe o seu email" placeholder="exe.exemplo@gmail.com" required>
+                                <label for="assunto">Assunto</label>
+                                    <input type="text" name="assunto" id="assunto" title="Informe o assunto" placeholder='Exemplo: "Primeiro Salto", "Escolas de Paraquedismo" ,etc...' required>
+                        </fieldset>
+                        <fieldset class="dados">
+                                <label for="mensagem">Mensagem</legend>
+                                <textarea type="text" name="mensagem" title="Descreva sua mensagem" cols="50" rows="6" placeholder="Digite aqui sua mensagem..." required></textarea>         
+                        </fieldset>      
+                        <button class="botao-contato" type="submit">Enviar</button>
+                </form>       
+        </main>
+        <footer class="rodape">
+            <div class="container">
+                <nav class="menu-redes-sociais">       
+                    <ul class="redes-sociais">
+                        <li><h1>siga</h1></li>
+                        <li><a class="facebook" href="#">Facebook</a></li>
+                        <li><a class="twitter"  href="#">Twitter</a></li>
+                        <li><a class="instagram" href="#">Instagram</a></li>
+                        <li><a class="linkedin" href="#">Linkedin</a></li>
+                    </ul>
+                </nav>
+                <p class="direitos-autorais"> copyrigth	&copy; paraquedismo | Todos os direitos revervados</p>
+            </div>
+        </footer>
+
+         <!-- Scripts JavaScript -->
+         <script src="js/jquery.js"></script>
+         <script src="js/botao_voltar_inicio.js"></script> 
+         <script src="js/validacaoForm.js"></script>  
+         <script src="js/menu_responsivo.js"></script>      
+    </body>
+</html>
